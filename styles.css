@@ -102,6 +102,11 @@ more global styles
  border: none;
 
 }
+.clearfix::after ,.clearfix::before{
+ content: " ";
+ clear: both;
+ display: table;
+}
 .btn:hover{
  background: var(--clr-primary-light);
  color: var(--clr-primary);
@@ -118,7 +123,7 @@ header section
 */
 .header{
  min-height: 100vh;
- background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+ background:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0)),
  url('./images/bg.jpg') center/cover no-repeat fixed;
  position: relative;
  overflow-x: hidden;
@@ -142,3 +147,50 @@ header section
  margin-top: 1.25rem;
  margin-bottom: 2rem;
 }
+/* 
+content divider 
+*/
+.content-divider{
+ height: 0.5rem;
+ background: linear-gradient(to left,rgba(--clr-grey-1),#d6a02d,#1a7fdf);
+}
+
+/* skills section */
+/* .skill{
+ background: var(--clr-grey-3);
+} */
+.skill{
+ text-align: center;
+ padding: 2.5rem 0;
+ transition:var(--transition);
+}
+.skill-icon{
+ font-size: 2.5rem;
+ margin-bottom: 1.25rem;
+ transition: var(--transition);
+ display: inline-block;
+ color:var(--clr-primary);
+}
+.skill-text{
+ color: var(--clr-grey-2);
+ max-width: 17rem;
+ margin: 0 auto;
+}
+.skills:hover{
+ background-color: var(--clr-white);
+ box-shadow: 0px 2px var(--clr-grey-2);
+}
+.skill:hover .skill-icon{
+ transform: translateY(5px);
+}
+@media screen and (min-width:576px){
+ .skills{
+ float:left;
+ width: 50%;
+ }
+@media screen and (min-width:886px) {
+ .skills{
+
+  width: 25%;
+ }
+}}
