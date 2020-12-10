@@ -107,6 +107,26 @@ more global styles
  clear: both;
  display: table;
 }
+.section-title h3{
+ font-family: var(--ff-secondary);
+ color: #3C493F;
+}
+.section-title{
+ margin-bottom: 2rem;
+}
+.section-center{
+ padding: 4rem 0;
+ width: 85vw;
+ margin: 0 auto;
+ max-width: 1170px;
+}
+@media screen and (min-width:992px){
+ .section-center{
+  width: 95vw;
+  padding: 4rem 1rem;
+
+ }
+}
 .btn:hover{
  background: var(--clr-primary-light);
  color: var(--clr-primary);
@@ -188,9 +208,35 @@ content divider
  float:left;
  width: 50%;
  }
-@media screen and (min-width:886px) {
+@media screen and (min-width:992px) {
  .skills{
-
   width: 25%;
+ }
+ .about-img,.about-info{
+  padding: 2rem 0;
+ }
+ .about-picture-container{
+  background: var(--clr-primary);
+  border: 0.2rem solid var(--clr-primary);
+  max-width: 30rem;
+  /* prevents image from wrapping outside */
+  overflow: hidden;
+ }
+ .about-picture{
+  transition: var(--transition);
+ }
+ .about-picture-container:hover .about-picture{
+  transform: scale(1.2);
+  opacity: 0.5;
+ }
+ .about-text{
+  max-width: 25rem;
+  color: var(--clr-grey-1);
+ }
+ @media screen and (min-width:992px){
+  .about-info,.about-img{
+   width: 50%;
+   float: left;
+  }
  }
 }}
